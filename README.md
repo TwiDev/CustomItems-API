@@ -77,6 +77,6 @@ An interaction action in the player's inventory bar
          });
 ```
 
-# Learn to use Callback
+### Learn to use Callback
 
 https://docs.oracle.com/javase/10/docs/api/javafx/util/Callback.html

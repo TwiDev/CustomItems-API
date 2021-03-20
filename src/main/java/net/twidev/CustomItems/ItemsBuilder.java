@@ -7,6 +7,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -241,6 +242,7 @@ public class ItemsBuilder extends ItemStack implements Listener {
      */
     public ItemsBuilder setAction(Actions action) {
         this.action = action;
+
         return this;
     }
 
@@ -327,8 +329,9 @@ public class ItemsBuilder extends ItemStack implements Listener {
      *
      * @param simpleAction simple action callback
      */
-    public void setSimpleAction(SimpleAction simpleAction) {
+    public ItemsBuilder setSimpleAction(SimpleAction simpleAction) {
         this.simpleAction = simpleAction;
+        return this;
     }
 
     /**
@@ -345,8 +348,9 @@ public class ItemsBuilder extends ItemStack implements Listener {
      *
      * @param interactActions interact action callback
      */
-    public void setInteractActions(InteractActions interactActions) {
+    public ItemsBuilder setInteractActions(InteractActions interactActions) {
         this.interactActions = interactActions;
+        return this;
     }
 
     @EventHandler

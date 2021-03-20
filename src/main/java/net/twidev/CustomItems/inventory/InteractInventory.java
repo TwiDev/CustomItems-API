@@ -2,6 +2,7 @@ package net.twidev.CustomItems.inventory;
 
 import net.twidev.CustomItems.ItemsBuilder;
 import org.bukkit.Bukkit;
+import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;

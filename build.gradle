@@ -13,10 +13,6 @@ repositories {
     mavenCentral()
     mavenLocal()
 
-    flatDir{
-        dirs "../sly-api/build/libs/"
-    }
-
     maven {
         url "https://hub.spigotmc.org/nexus/content/repositories/snapshots"
     }
@@ -29,8 +25,6 @@ repositories {
 dependencies {
 
     compileOnly group: 'org.spigotmc', name: 'spigot-api', version: '1.8-R0.1-SNAPSHOT'
-
-    compileOnly name: 'sly-api-4.0.0'
 }
 
 task fatJar(type: Jar) {

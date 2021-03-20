@@ -43,3 +43,40 @@ Exemple of a custom Items interact Inventory
         Bukkit.getPlayer("TwiDev").openInventory(interactInventory.getInventory());
 
 ```
+
+You can create different type of action
+
+
+One click in an inventory
+
+```java
+  ItemsBuilder myItemStack = new ItemsBuilder(Material.APPLE, 20).setAction(player -> {
+                player.sendMessage("Hello");       
+        });
+```
+
+a specific click in an inventory
+
+```java
+  ItemsBuilder myItemStack = new ItemsBuilder(Material.APPLE, 20).setActions((player, clickType) -> {
+                    if(clickType == ClickType.LEFT) {
+                        player.sendMessage("Hello");
+                    }
+        });
+```
+
+
+An interaction action in the player's inventory bar
+
+
+```java
+  ItemsBuilder myItemStack = new ItemsBuilder(Material.APPLE, 20).setInteractActions((player, action) -> {
+                    if(action == Action.LEFT_CLICK_AIR) {
+                        player.sendMessage("Hello");
+                    }
+                });
+```
+
+##Learn to use Callback
+
+https://docs.oracle.com/javase/10/docs/api/javafx/util/Callback.html

@@ -1,12 +1,8 @@
 ## CustomItems-API
 
-
-------------------------------------
-
 - Name : CustomItems-API
 - Version : Alpha
 - Developpers : TwiDev
-- 
 
 Create your minecraft items easily and assign actions thanks to the creation of customized items
 

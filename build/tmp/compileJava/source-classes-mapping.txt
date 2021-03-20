@@ -1,14 +1,14 @@
 net/twidev/CustomItems/actions/InteractActions.java
  net.twidev.CustomItems.actions.InteractActions
-net/twidev/CustomItems/inventory/InteractInventory.java
- net.twidev.CustomItems.inventory.InteractInventory
-net/twidev/CustomItems/ItemsBuilder.java
- net.twidev.CustomItems.ItemsBuilder
-net/twidev/CustomItems/Items.java
- net.twidev.CustomItems.Items
 net/twidev/CustomItems/actions/Actions.java
  net.twidev.CustomItems.actions.Actions
 net/twidev/CustomItems/actions/SimpleAction.java
  net.twidev.CustomItems.actions.SimpleAction
+net/twidev/CustomItems/Items.java
+ net.twidev.CustomItems.Items
+net/twidev/CustomItems/inventory/InteractInventory.java
+ net.twidev.CustomItems.inventory.InteractInventory
+net/twidev/CustomItems/ItemsBuilder.java
+ net.twidev.CustomItems.ItemsBuilder
 net/twidev/CustomItems/listeners/InventoryEvent.java
  net.twidev.CustomItems.listeners.InventoryEvent

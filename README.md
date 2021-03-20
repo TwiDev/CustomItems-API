@@ -74,7 +74,7 @@ An interaction action in the player's inventory bar
                     if(action == Action.LEFT_CLICK_AIR) {
                         player.sendMessage("Hello");
                     }
-         });
+        });
 ```
 
 ### Learn to use Callback

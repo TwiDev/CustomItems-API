@@ -35,7 +35,7 @@ public class ItemsBuilder extends ItemStack implements Listener {
      * Create your custom items with
      *
      * @param item default itemstack
-     * @param displayName
+     * @param displayName custom displayName
      * @param lore description
      */
     public ItemsBuilder(ItemStack item, String displayName, String lore) {
@@ -248,7 +248,7 @@ public class ItemsBuilder extends ItemStack implements Listener {
      * Add a simple action to the item
      *
      * @param simpleAction a simple action
-     * @return
+     * @return ItemsBuilder
      */
     public ItemsBuilder setAction(SimpleAction simpleAction) {
         this.simpleAction = simpleAction;

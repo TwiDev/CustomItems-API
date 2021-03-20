@@ -1,4 +1,4 @@
-### CustomItems-API
+## CustomItems-API
 Create your minecraft items easily and assign actions thanks to the creation of customized items
 
 ## Installation

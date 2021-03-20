@@ -74,9 +74,9 @@ An interaction action in the player's inventory bar
                     if(action == Action.LEFT_CLICK_AIR) {
                         player.sendMessage("Hello");
                     }
-                });
+         });
 ```
 
-##Learn to use Callback
+# Learn to use Callback
 
 https://docs.oracle.com/javase/10/docs/api/javafx/util/Callback.html

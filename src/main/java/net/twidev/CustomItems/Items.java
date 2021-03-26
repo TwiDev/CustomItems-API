@@ -1,6 +1,7 @@
 package net.twidev.CustomItems;
 
 import net.twidev.CustomItems.listeners.InventoryEvent;
+import net.twidev.CustomItems.recipe.RecipeInjector;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -25,6 +26,7 @@ public class Items extends JavaPlugin {
         log("#==================================================#");
 
         getServer().getPluginManager().registerEvents(new InventoryEvent(), this);
+        getServer().getPluginManager().registerEvents(new RecipeInjector(), this);
 
         super.onEnable();
     }

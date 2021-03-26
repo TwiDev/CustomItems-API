@@ -3,11 +3,12 @@ package net.twidev.CustomItems;
 import net.twidev.CustomItems.actions.Actions;
 import net.twidev.CustomItems.actions.InteractActions;
 import net.twidev.CustomItems.actions.SimpleAction;
+import net.twidev.CustomItems.recipe.RecipeCustom;
+import net.twidev.CustomItems.recipe.RecipeGroup;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -31,6 +32,8 @@ public class ItemsBuilder extends ItemStack implements Listener {
     private SimpleAction simpleAction = null;
 
     private InteractActions interactActions = null;
+
+    private RecipeCustom customRecipe = null;
 
     /**
      * Create your custom items with
@@ -363,5 +366,28 @@ public class ItemsBuilder extends ItemStack implements Listener {
 
             interactActions.onInteract(e.getPlayer(), e.getAction());
         }
+    }
+
+    /**
+     * Get the craft
+     *
+     * @return recipe
+     */
+    public RecipeCustom getCustomRecipe() {
+        return customRecipe;
+    }
+
+    /**
+     * Set a custom recipe
+     *
+     * @param customRecipe recipe
+     * @return itemsBuilder
+     */
+    public ItemsBuilder setCustomRecipe(RecipeCustom customRecipe) {
+        RecipeGroup.loadRecipe(customRecipe);
+
+        this.customRecipe = customRecipe;
+
+        return this;
     }
 }

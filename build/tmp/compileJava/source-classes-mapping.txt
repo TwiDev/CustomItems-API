@@ -4,11 +4,17 @@ net/twidev/CustomItems/actions/Actions.java
  net.twidev.CustomItems.actions.Actions
 net/twidev/CustomItems/actions/SimpleAction.java
  net.twidev.CustomItems.actions.SimpleAction
-net/twidev/CustomItems/Items.java
- net.twidev.CustomItems.Items
+net/twidev/CustomItems/recipe/RecipeGroup.java
+ net.twidev.CustomItems.recipe.RecipeGroup
+net/twidev/CustomItems/recipe/RecipeCustom.java
+ net.twidev.CustomItems.recipe.RecipeCustom
 net/twidev/CustomItems/inventory/InteractInventory.java
  net.twidev.CustomItems.inventory.InteractInventory
 net/twidev/CustomItems/ItemsBuilder.java
  net.twidev.CustomItems.ItemsBuilder
+net/twidev/CustomItems/recipe/RecipeInjector.java
+ net.twidev.CustomItems.recipe.RecipeInjector
+net/twidev/CustomItems/Items.java
+ net.twidev.CustomItems.Items
 net/twidev/CustomItems/listeners/InventoryEvent.java
  net.twidev.CustomItems.listeners.InventoryEvent

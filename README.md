@@ -77,6 +77,21 @@ An interaction action in the player's inventory bar
         });
 ```
 
+Add a custom recipe to the custom item
+
+```java
+public class CustomItems extends ItemsBuilder {
+
+    public CustomItems() {
+        super(Material.APPLE);
+
+        this.setCustomRecipe(new RecipeCustom(this)
+            .setItem(2, new ItemStack(Material.STONE))
+        );
+    }
+}
+```
+
 ### Learn to use Callback
 
 https://docs.oracle.com/javase/10/docs/api/javafx/util/Callback.html

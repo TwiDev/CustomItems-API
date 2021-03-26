@@ -1,7 +1,9 @@
 package net.twidev.CustomItems;
 
 import net.twidev.CustomItems.listeners.InventoryEvent;
+import net.twidev.CustomItems.recipe.RecipeCustom;
 import net.twidev.CustomItems.recipe.RecipeInjector;
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**

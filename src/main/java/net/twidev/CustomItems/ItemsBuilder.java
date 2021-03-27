@@ -3,7 +3,7 @@ package net.twidev.CustomItems;
 import net.twidev.CustomItems.actions.Actions;
 import net.twidev.CustomItems.actions.InteractActions;
 import net.twidev.CustomItems.actions.SimpleAction;
-import net.twidev.CustomItems.recipe.RecipeCustom;
+import net.twidev.CustomItems.recipe.CustomRecipe;
 import net.twidev.CustomItems.recipe.RecipeGroup;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -33,7 +33,7 @@ public class ItemsBuilder extends ItemStack implements Listener {
 
     private InteractActions interactActions = null;
 
-    private RecipeCustom customRecipe = null;
+    private CustomRecipe customRecipe = null;
 
     /**
      * Create your custom items with
@@ -373,7 +373,7 @@ public class ItemsBuilder extends ItemStack implements Listener {
      *
      * @return recipe
      */
-    public RecipeCustom getCustomRecipe() {
+    public CustomRecipe getCustomRecipe() {
         return customRecipe;
     }
 
@@ -383,10 +383,12 @@ public class ItemsBuilder extends ItemStack implements Listener {
      * @param customRecipe recipe
      * @return itemsBuilder
      */
-    public ItemsBuilder setCustomRecipe(RecipeCustom customRecipe) {
+    public ItemsBuilder setCustomRecipe(CustomRecipe customRecipe) {
         RecipeGroup.loadRecipe(customRecipe);
 
         this.customRecipe = customRecipe;
+
+        System.out.println(customRecipe.items.toString());
 
         return this;
     }

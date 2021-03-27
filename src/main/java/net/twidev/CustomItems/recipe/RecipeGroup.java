@@ -1,5 +1,6 @@
 package net.twidev.CustomItems.recipe;
 
+import net.twidev.CustomItems.ItemsBuilder;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
@@ -10,14 +11,14 @@ import java.util.List;
  */
 public class RecipeGroup {
 
-    private static final List<RecipeCustom> recipes = new ArrayList<>();
+    private static final List<CustomRecipe> recipes = new ArrayList<>();
 
     /**
      * Add custom recipe to list
      *
      * @param itemRecipe recipe
      */
-    public static void loadRecipe(RecipeCustom itemRecipe) {
+    public static void loadRecipe(CustomRecipe itemRecipe) {
         recipes.add(itemRecipe);
     }
 
@@ -26,7 +27,7 @@ public class RecipeGroup {
      *
      * @return recipes
      */
-    public static List<RecipeCustom> getRecipes() {
+    public static List<CustomRecipe> getRecipes() {
         return recipes;
     }
 
@@ -36,12 +37,12 @@ public class RecipeGroup {
      * @param itemStack result of the recipe
      * @return list of recipes with the result
      */
-    public static List<RecipeCustom> findGroupsByResult(final ItemStack itemStack) {
+    public static List<CustomRecipe> findGroupsByResult(final ItemStack itemStack) {
 
-        List<RecipeCustom> result = new ArrayList<>();
+        List<CustomRecipe> result = new ArrayList<>();
 
         recipes.forEach(itemRecipe -> {
-            if(itemRecipe.getResult() == itemStack) {
+            if(itemRecipe.getResult().getType() == itemStack.getType()) {
                 result.add(itemRecipe);
             }
         });

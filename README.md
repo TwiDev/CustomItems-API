@@ -80,16 +80,19 @@ An interaction action in the player's inventory bar
 Add a custom recipe to the custom item
 
 ```java
-public class CustomItems extends ItemsBuilder {
+   ItemsBuilder itemsBuilder = new ItemsBuilder(Material.APPLE).setName("§cVery good apple").setInteractActions((player, action) -> {
+            player.sendMessage("test");
+        });
 
-    public CustomItems() {
-        super(Material.APPLE);
+        itemsBuilder.setAction(player -> player.sendMessage("Hello"));
 
-        this.setCustomRecipe(new RecipeCustom(this)
-            .setItem(2, new ItemStack(Material.STONE))
-        );
-    }
-}
+        CustomRecipe customRecipe = new CustomRecipe(itemsBuilder)
+                .setItem(4, new ItemStack(Material.SPONGE))
+                .setItem(5, new ItemsBuilder(Material.DIRT).setName("§8Hello"));
+
+        customRecipe.loadRecipe();
+
+        itemsBuilder.setCustomRecipe(customRecipe);
 ```
 
 ### Learn to use Callback

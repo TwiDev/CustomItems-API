@@ -1,4 +1,4 @@
 name: CustomItems
-version: 1.0.2
+version: 1.0.3
 author: TwiDev
-main: net.twidev.CustomItems
+main: net.twidev.CustomItems.Items

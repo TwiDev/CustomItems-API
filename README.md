@@ -4,7 +4,7 @@
 - Version : Alpha
 - Developpers : TwiDev
 
-Create your minecraft items easily and assign actions thanks to the creation of customized items
+Create your personalized items with customized actions and crafting recipe quickly and easily with the custom
 
 ## Installation
 

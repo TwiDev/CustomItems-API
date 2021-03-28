@@ -388,8 +388,6 @@ public class ItemsBuilder extends ItemStack implements Listener {
 
         this.customRecipe = customRecipe;
 
-        System.out.println(customRecipe.items.toString());
-
         return this;
     }
 }

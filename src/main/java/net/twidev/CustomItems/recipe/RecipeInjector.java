@@ -27,43 +27,56 @@ public class RecipeInjector implements Listener {
 
         List<CustomRecipe> possibleRecipeGroups = RecipeGroup.findGroupsByResult(serverRecipe.getResult());
 
-        System.out.println(possibleRecipeGroups.toString());
-
-        System.out.println(RecipeGroup.getRecipes().toString());
-
         if(possibleRecipeGroups.size() == 0) return;
 
-        for(CustomRecipe recipe : possibleRecipeGroups){
+       CustomRecipe customRecipe = null;
 
-            boolean isRecipe = true;
+       for(CustomRecipe recipe : possibleRecipeGroups){
 
-            for(int i = 1; i < 9; i++) {
+           boolean isRecipe = true;
+
+            for(int i = 1; i < inv.getSize(); i++) {
+
                 int index = i;
 
-                if(index == 0)
-                    index = 1;
+                index -= 1;
 
-                if(recipe.getItems(index++) != null && recipe.getItems(index++).hasItemMeta() && recipe.getItems(index++).getItemMeta().hasDisplayName()) {
-
-                    System.out.println(recipe.getItems(index++).getItemMeta().getDisplayName());
-                    System.out.println(inv.getItem(index).getItemMeta().getDisplayName());
-
-                    if(inv.getItem(i) != null && inv.getItem(i).hasItemMeta() && inv.getItem(i).getItemMeta().hasDisplayName()) {
-                        if (!recipe.getItems(index++).getItemMeta().getDisplayName().equals(inv.getItem(i).getItemMeta().getDisplayName())) {
+                if(recipe.getItems(index) != null && inv.getItem(i) != null) {
+                    if(recipe.getItems(index).hasItemMeta()) {
+                        if(inv.getItem(i).hasItemMeta()) {
+                            if(recipe.getItems(index).getItemMeta().hasDisplayName()) {
+                                if(inv.getItem(i).getItemMeta().hasDisplayName()) {
+                                    if(!inv.getItem(i).getItemMeta().getDisplayName().equals(recipe.getItems(index).getItemMeta().getDisplayName())) {
+                                        isRecipe = false;
+                                    }
+                                }else{
+                                    isRecipe = false;
+                                }
+                            }
+                        }else{
                             isRecipe = false;
                         }
                     }
-                }else continue;
+
+                }
+
             }
 
             if(isRecipe) {
-                inv.setResult(recipe.getResult());
+                customRecipe = recipe;
+            }
 
-                return;
-            }else continue;
-        }
+            continue;
+       }
 
-        inv.setResult(null);
+       if(customRecipe != null) {
+           inv.setResult(customRecipe.getResult());
+
+           return;
+       }else{
+           inv.setResult(null);
+       }
+
     }
 
 

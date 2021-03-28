@@ -31,8 +31,6 @@ public class CustomRecipe {
 
         initItems();
 
-        System.out.println(items);
-
     }
 
     public void loadRecipe() {
@@ -51,9 +49,6 @@ public class CustomRecipe {
         String[] shapes = shape.split(" ");
 
         for(int i = 0; i < shapes.length; i++) {
-
-            System.out.println(shapes[i].charAt(0));
-
             int index = i;
 
             if(index == 0)
@@ -67,8 +62,6 @@ public class CustomRecipe {
             }
 
         }
-
-        System.out.println(shapedRecipe.getIngredientMap().toString());
 
         Items.getInstance().getServer().addRecipe(shapedRecipe);
 
